@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-start: #fff8f1;
+  --bg-end: #e0f2fe;
+  --panel: rgba(255, 255, 255, 0.78);
+  --line: rgba(15, 23, 42, 0.12);
+  --assistant: #0f766e;
+  --user: #ea580c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  color: #0f172a;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(251, 191, 36, 0.2), transparent 42%),
+    radial-gradient(circle at 80% 10%, rgba(14, 116, 144, 0.2), transparent 35%),
+    linear-gradient(135deg, var(--bg-start), var(--bg-end));
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.message-enter {
+  animation: rise-in 260ms ease;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
